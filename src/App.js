@@ -14,6 +14,7 @@ const App = () => {
       <div className="App">
         <Router>
           <Switch>
+          {/* routes used in the project */}
             <Route path='/' exact component={Products} />
             <Route path='/add-product' component={AddProduct} />
             <Route path='/update-product' component={UpdateProduct} />

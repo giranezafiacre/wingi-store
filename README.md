@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Wingi Store Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wingi is e-commerce platform where merchants are able to create their own store 
+and add their product and share them with consumers
 
-## Available Scripts
+## Demo
 
+[link for Demo](https://drive.google.com/file/d/1Yk2NdYTuDeNsuvUUzX4k81UDlcLMymGe/view?usp=share_link)
+
+## Getting started
+
+### Installation
 In the project directory, you can run:
+1. Clone the repo
 
-### `npm start`
+`git clone https://github.com/giranezafiacre/wingi-store.git`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install NPM packages
+`npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Running the App
+1. Run the app in development mode
+`npm run start`
 
-### `npm test`
+2. Open http://localhost:3000 to view the app in the browser
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Building the App
+To build the app for production, run the following command:
+`npm run build`
 
-### `npm run build`
+This will create an optimized `build` of the app in the build folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### folder structure
+wingi-store/
+   - README.md
+   - package.json
+   - .gitignore
+   - public/
+      - index.html
+      - favicon.ico
+   - src/
+      - App.js
+      - App.css
+      - index.js
+      - pages
+          - addProducts
+              - index.jsx
+          - adminProducts
+              - index.jsx
+          - checkout
+              - index.jsx
+          - errorPage
+              - index.jsx
+          - products
+              - index.jsx
+          - updateProducts
+              - index.jsx
+      - firebase
+          - addProducts.js
+          - index.js
+      - components
+          - filter
+              - index.js
+              - filter.css
+          - filterAdmin
+              - index.js
+              - filterAdmin.css
+          - footer
+             - index.js
+             - footer.css
+          - forms
+             - checkoutForm
+                  - index.js
+                  - checkoutForm.css
+             - productForm
+                  - index.js
+                  - productForm.css
+          - header
+             - index.js
+             - header.css
+      - assets
+         - images
+             
+      - appContext
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technologies Used
+List the technologies used in the project:
 
-### `npm run eject`
+* React
+* React Router
+* Bootstrap
+* Firebase
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Features
+List the features of the project:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Client and admin/merchant can search for product by name, description or category
+* Client can add product
+* Merchant can update a product
+* Merchant can delete a product
+* Merchant and client can read a product
+* Merchant can create a new product
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+I used Github for code deployment and [Vercel](https://wingi-store.vercel.app/) for site to be live 
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

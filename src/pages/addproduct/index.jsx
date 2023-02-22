@@ -7,6 +7,8 @@ import AddProd from '../../firebase/addProduct';
 const AddProduct = () => {
     const { state, setState } = useContext(appContext);
     console.log(state)
+
+    // handle onchange event
     const handleChange = (e) => {
         console.log(e.target.value)
         setState({
@@ -14,6 +16,8 @@ const AddProduct = () => {
             [e.target.name]: e.target.value
         })
     }
+
+    // handle onchange of image input
     const handleChangeFile = (e) => {
         console.log(e.target.value)
         setState({
@@ -21,12 +25,16 @@ const AddProduct = () => {
             file: e.target.files[0]
         })
     }
+
+    // handle onchange of category
     const handleCategory = (e) => {
             setState({
                 ...state,
                 category: e.target.value
             })
     }
+
+    // handle onsubmit function
     const handleSubmit = async (e) => {
         e.preventDefault();
         AddProd(

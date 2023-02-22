@@ -12,18 +12,25 @@ import Footer from '../../components/footer';
 import FilterAdmin from "../../components/filterAdmin";
 
 const AdminProducts = () => {
+
+    // get collection which will be used to store or retriev
     let productsCollectionRef = collection(db, "products");
     const [products, setProducts] = useState();
     const [filterText, setFilterText] = useState();
+
+    // handle filered text
     const handleFilterTextChange = (e) => {
         setFilterText(e.target.value.toLowerCase())
     }
 
+    // get all products
     const getProducts = async () => {
         const data = await getDocs(productsCollectionRef);
         setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
-    const deleteUser = async (id) => {
+
+
+    const deleteProduct = async (id) => {
         const productsDoc = doc(db, "products", id);
         await deleteDoc(productsDoc);
         window.location.href = "https://wingi-store.vercel.app/admin"
@@ -52,7 +59,7 @@ const AdminProducts = () => {
                         }}>Update</a>
                         <button className="btn btn-danger" onClick={(e) => {
                             e.preventDefault()
-                            deleteUser(product.id)
+                            deleteProduct(product.id)
                         }}>Delete</button>
                     </div>
                 </div>

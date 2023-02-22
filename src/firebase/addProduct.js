@@ -9,7 +9,7 @@ import {
     addDoc
 } from "firebase/firestore";
 
-
+// function to create new product
 const AddProd = (name, description, price, quantity, category, file) => {
     console.log(file)
     //get your image

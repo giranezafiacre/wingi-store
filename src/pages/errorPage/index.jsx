@@ -1,5 +1,6 @@
 import React from "react";
 
+// return 404 error for unknown route
 const ErrorPage = () => (
   <div data-testid="error-page">
     <div>

@@ -4,6 +4,8 @@ import Header from "../../components/header";
 import Filter from "../../components/filter";
 
 const Checkout=()=>{
+
+    // declare states of filtering text and handling onchange events in its input
     const [filterText, setFilterText] = useState();
     const handleFilterTextChange = (e) => {
         setFilterText(e.target.value.toLowerCase())

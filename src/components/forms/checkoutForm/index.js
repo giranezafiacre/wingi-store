@@ -5,10 +5,13 @@ import { db } from '../../../firebase';
 import './checkoutForm.css';
 
 const CheckoutForm = (props) => {
+
+    // declare global and local states
     const { state, setState } = useContext(appContext);
     const [products, setProducts] = useState([]);
+
+    // handle onchange event
     const handleChange = (e) => {
-        console.log(e.target.name);
         setState({
             ...state,
             inputValues: {
@@ -27,6 +30,8 @@ const CheckoutForm = (props) => {
         };
         fetchData();
     }, []);
+
+    // handle filtered data
     const filteredProducts = [];
     products?.forEach((product) => {
         if (props.filterText && product.name.toLowerCase().indexOf(props.filterText) === -1

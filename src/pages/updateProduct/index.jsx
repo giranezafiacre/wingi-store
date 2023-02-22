@@ -12,8 +12,8 @@ const UpdateProduct = () => {
     const { state, setState } = useContext(appContext);
     const [product, setProduct] = useState()
     
+    // retrieve product
     const getProduct = async () => {
-        console.log("hello", state)
         const productDoc = doc(db, "products", localStorage.getItem('id'));
         const docVar = await getDoc(productDoc);
         console.log(docVar.data());
@@ -35,7 +35,6 @@ const UpdateProduct = () => {
         }
     })
     const handleChange = (e) => {
-        console.log(e.target.value)
         setState({
             ...state,
             [e.target.name]: e.target.value
@@ -43,9 +42,13 @@ const UpdateProduct = () => {
     }
 
     const handleChangeFile = (e) => {
+
+        // use this function which take firebase URL
         getImage(e.target.files[0])
         
     }
+
+    // handle category on change
     const handleCategory = (e) => {
             setState({
                 ...state,
@@ -53,6 +56,7 @@ const UpdateProduct = () => {
             })
     }
     
+    // to get Image URL
     const getImage = (file) => {
         var image = file;
 
@@ -69,6 +73,8 @@ const UpdateProduct = () => {
             });
         });
     }
+
+    // onsubmit function
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(state)
@@ -90,6 +96,8 @@ const UpdateProduct = () => {
             price: 0,
             quantity: 0,
         })
+
+        // redirect after updating
         window.location.href = "https://wingi-store.vercel.app/admin";
     }
     return (
