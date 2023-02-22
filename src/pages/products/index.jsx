@@ -22,12 +22,11 @@ const Products = () => {
         setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     const addToCart = (product) => {
-        let products =localStorage.getItem('cart')?[localStorage.getItem('cart')]:[]
-         if(!products.includes(product.id)){
+        let products = localStorage.getItem('cart') ? [localStorage.getItem('cart')] : []
+        if (!products.includes(product.id)) {
             products.push(product.id)
-         }
+        }
         localStorage.setItem('cart', products)
-
     }
     // filtering products
     const filteredProducts = [];
@@ -57,7 +56,7 @@ const Products = () => {
     useEffect(() => {
         if (!products) {
             getProducts();
-        }else{
+        } else {
             console.log(products)
         }
     });
@@ -67,9 +66,11 @@ const Products = () => {
             <Filter
                 filterText={filterText}
                 handleFilter={handleFilterTextChange} />
-            {
-                filteredProducts
-            }
+            <div className="products-client">
+                {
+                    filteredProducts
+                }
+            </div>
             <Footer />
         </>
     )

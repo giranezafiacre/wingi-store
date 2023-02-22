@@ -9,7 +9,7 @@ const Header = () => {
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                 <span className="padding_10">Cart</span>
             </a>
-            <a href='/' className='btn d-flex login-header'>
+            <a href='/admin' className='btn d-flex login-header'>
                 <span>Login</span>
                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 89.63 122.88"><title>log-in</title><path d="M33.27,68.66H7.15a7.23,

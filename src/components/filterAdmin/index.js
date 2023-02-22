@@ -1,21 +1,21 @@
 import React from 'react';
-import './filter.css';
+import './filterAdmin.css';
 import logo from '../../assets/images/wingi-logo.png';
 import spinner from '../../assets/images/spinner.svg';
 
-const Filter = (props) => {
+const FilterAdmin = (props) => {
     return (
         <div className='filter'>
             <div>
                 <img src={logo} onClick={(e) => {
                   window.location.href = "http://localhost:3000/"
-                }}  alt='Wingi-logo' />
+                }} alt='Wingi-logo' />
             </div>
             <div className='form-filter'>
                 <form>
                     <div class="input-group flex-nowrap">
                         <input type="text" class="form-control"
-                            placeholder="What are you looking for?" value={props.filterText} onChange={props.handleFilter}/>
+                            placeholder="What are you looking for?" value={props.filterText} onChange={props.handleFilter} />
                     </div>
                     <button className="live-search-button" type="submit"
                         aria-label="Search" data-live-search-submit="">
@@ -40,9 +40,10 @@ const Filter = (props) => {
                         </span>
                     </button>
                 </form>
-            </div>
 
+            </div>
+            <div className='add-prod'><a href='/add-product' className='btn btn-secondary'> Add New Product</a></div>
         </div>
     )
 }
-export default Filter;
+export default FilterAdmin;

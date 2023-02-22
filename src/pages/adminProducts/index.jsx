@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Filter from "../../components/filter";
 import Header from "../../components/header";
 import {
     collection,
@@ -10,6 +9,7 @@ import {
 import { db } from "../../firebase";
 import './products.css';
 import Footer from '../../components/footer';
+import FilterAdmin from "../../components/filterAdmin";
 
 const AdminProducts = () => {
     let productsCollectionRef = collection(db, "products");
@@ -68,12 +68,14 @@ const AdminProducts = () => {
     return (
         <>
             <Header />
-            <Filter
+            <FilterAdmin
                 filterText={filterText}
                 handleFilter={handleFilterTextChange} />
-            {
-                filteredProducts
-            }
+
+            <div className="products">
+                {filteredProducts}
+            </div>
+
             <Footer />
         </>
     )

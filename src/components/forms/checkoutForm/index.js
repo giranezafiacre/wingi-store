@@ -65,12 +65,12 @@ const CheckoutForm = (props) => {
                 let newFields = {
                     quantity: (product.quantity - state.inputValues[`input${product.id}`]),
                 }
-
                 await updateDoc(productDoc, newFields)
+                localStorage.removeItem('cart');
             } else {
-
                 alert('we do not have that amount of ' + product.name)
             }
+            window.location.href = "http://localhost:3000/"
         })
     }
     return (

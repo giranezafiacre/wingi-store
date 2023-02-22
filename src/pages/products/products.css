@@ -1,3 +1,9 @@
 .buttons-prod a:first-child,.buttons-prod a:nth-child(2){
   margin-right: 10px;
 }
+.products-client{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20vh;
+}
