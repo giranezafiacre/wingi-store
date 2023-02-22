@@ -90,7 +90,7 @@ const UpdateProduct = () => {
             price: 0,
             quantity: 0,
         })
-        window.location.href = "http://localhost:3000/admin";
+        window.location.href = "https://wingi-store-project.netlify.app/admin";
     }
     return (
         <div className='auth-form'>
