@@ -5,6 +5,10 @@ const Header = () => {
 
     return (
         <div className='header'>
+            <a className='cart' href="/checkout">
+                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span className="padding_10">Cart</span>
+            </a>
             <a href='/' className='btn d-flex login-header'>
                 <span>Login</span>
                 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"

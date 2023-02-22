@@ -22,15 +22,13 @@ const AddProduct = () => {
         })
     }
     const handleCategory = (e) => {
-        setState({
-            ...state,
-            category: e.target.value
-        })
+            setState({
+                ...state,
+                category: e.target.value
+            })
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        
         AddProd(
             state.productName,
             state.description,

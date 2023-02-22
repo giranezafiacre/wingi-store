@@ -53,11 +53,11 @@ const ProductForm = (props) => {
                         </label>
                         <select className='form-select' value={props.category} onChange={props.handleCategory}>
                             <option value="select">Select a category</option>
-                            <option value="1">Electronics</option>
-                            <option value="2">Clothes</option>
-                            <option value="3">Furnitures</option>
-                            <option value="4">Jeweleries</option>
-                            <option value="5">Party & Gifts</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Furnitures">Furnitures</option>
+                            <option value="Jeweleries">Jeweleries</option>
+                            <option value="Party & Gifts">Party & Gifts</option>
                         </select>
                     </div>
 

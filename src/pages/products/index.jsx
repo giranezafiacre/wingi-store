@@ -21,7 +21,14 @@ const Products = () => {
         const data = await getDocs(productsCollectionRef);
         setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
+    const addToCart = (product) => {
+        let products =localStorage.getItem('cart')?[localStorage.getItem('cart')]:[]
+         if(!products.includes(product.id)){
+            products.push(product.id)
+         }
+        localStorage.setItem('cart', products)
 
+    }
     // filtering products
     const filteredProducts = [];
     products?.forEach((product) => {
@@ -31,16 +38,17 @@ const Products = () => {
             return;
         }
         filteredProducts.push(
-            <div className="card" style={{ "width": "18rem" }}>
+            <div className="card" key={product.id} style={{ "width": "18rem" }}>
                 <img className="card-img-top" src={product.imageURL} alt={product.name} />
                 <div className="card-body">
                     <h5 className="card-title">{product.name}</h5>
                     <p className="card-text">{product.description}</p>
                     <div className="buttons-prod">
-                        <a href="/href" className="btn btn-primary">Buy</a>
+                        <a href="/href" onClick={(e) => {
+                            e.preventDefault();
+                            addToCart(product)
+                        }} className="btn btn-primary">Add To Cart</a>
                     </div>
-
-
                 </div>
             </div>
         );
@@ -49,6 +57,8 @@ const Products = () => {
     useEffect(() => {
         if (!products) {
             getProducts();
+        }else{
+            console.log(products)
         }
     });
     return (

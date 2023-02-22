@@ -37,3 +37,11 @@
 .login-header:hover svg{
     fill: #AFCA05;
 }
+.cart{
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 20px;
+}
+.cart i{
+    margin-right: 5px;
+}

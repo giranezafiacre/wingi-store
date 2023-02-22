@@ -4,8 +4,10 @@ var store = {
     productName:'',
     description:'',
     category:'',
+    price:0,
     quantity:0,
-    file:null
+    file:null,
+    inputValues: {},
 }
 export const appContext = React.createContext(store);
 
