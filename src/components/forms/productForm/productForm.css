@@ -1,0 +1,39 @@
+.product-img{
+    background: url(../../../assets/images/wingi-bg.png) bottom center repeat-x;
+    margin-bottom: 0px;
+    min-height: 60vh;
+}
+.product-form{
+    background: #f3f3f3;
+}
+.button .btn{
+    background-color: #AFCA05;
+    color:#ffffff;
+    padding:7px 20px;
+}
+.button .btn:hover{
+    color: #000000;
+}
+.mb-3.input textarea{
+    height:130px;
+}
+.prod-img form{
+   background-color: #ffffff;
+   width: 45vw;
+   padding:20px 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.prod-img form .mb-3.input{
+    width: 90%;
+}
+.prod-img label{
+    text-align: left;
+}
+.prod-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

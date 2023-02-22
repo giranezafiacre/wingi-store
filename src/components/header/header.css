@@ -1,0 +1,39 @@
+.header {
+    background-color: #AFCA05;
+    height: 70px;
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding-right:20px;
+
+}
+
+
+.login-header {
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #1a1a18;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px!important;
+    line-height: 1;
+    max-width: 150px;
+    text-align: center;
+}
+.login-header:hover{
+    color: #AFCA05;
+}
+.login-header span{
+    margin-right: 5px;
+}
+
+.login-header svg{
+    fill: #ffffff;
+    height:15px;
+}
+.login-header:hover svg{
+    fill: #AFCA05;
+}
