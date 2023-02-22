@@ -70,7 +70,7 @@ const CheckoutForm = (props) => {
             } else {
                 alert('we do not have that amount of ' + product.name)
             }
-            window.location.href = "http://localhost:3000/"
+            window.location.href = "https://wingi-store.vercel.app/"
         })
     }
     return (

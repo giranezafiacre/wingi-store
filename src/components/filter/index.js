@@ -8,7 +8,7 @@ const Filter = (props) => {
         <div className='filter'>
             <div>
                 <img src={logo} onClick={(e) => {
-                  window.location.href = "http://localhost:3000/"
+                  window.location.href = "https://wingi-store.vercel.app/"
                 }}  alt='Wingi-logo' />
             </div>
             <div className='form-filter'>

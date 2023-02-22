@@ -26,7 +26,7 @@ const AdminProducts = () => {
     const deleteUser = async (id) => {
         const productsDoc = doc(db, "products", id);
         await deleteDoc(productsDoc);
-        window.location.href = "http://localhost:3000/admin"
+        window.location.href = "https://wingi-store.vercel.app/admin"
     };
     // filtering products
     const filteredProducts = [];
@@ -47,7 +47,7 @@ const AdminProducts = () => {
                         <a href="/href" className="btn btn-primary" onClick={(e) => {
                             e.preventDefault();
                             localStorage.setItem('id', product.id)
-                            window.location.href = "http://localhost:3000/update-product";
+                            window.location.href = "https://wingi-store.vercel.app/update-product";
 
                         }}>Update</a>
                         <button className="btn btn-danger" onClick={(e) => {

@@ -28,7 +28,7 @@ const AddProd = (name, description, price, quantity, category, file) => {
                 category: category,
                 imageURL: url
             });
-            window.location.href = "http://localhost:3000/add-product"
+            window.location.href = "https://wingi-store.vercel.app/add-product"
         });
     });
 }

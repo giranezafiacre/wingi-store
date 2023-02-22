@@ -90,7 +90,7 @@ const UpdateProduct = () => {
             price: 0,
             quantity: 0,
         })
-        window.location.href = "https://wingi-store-project.netlify.app/admin";
+        window.location.href = "https://wingi-store.vercel.app/admin";
     }
     return (
         <div className='auth-form'>
